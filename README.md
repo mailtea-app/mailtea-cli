@@ -1,7 +1,7 @@
 # Mailtea CLI
 
 Send, schedule, and manage email with [Mailtea](https://mailtea.app) from your
-shell or an AI agent. Wraps the [`mailtea`](https://www.npmjs.com/package/mailtea)
+shell or an AI agent. Wraps the [`mailtea-sdk`](https://www.npmjs.com/package/mailtea-sdk)
 SDK for everyday commands, and bridges the full
 [`mailtea-mcp`](https://www.npmjs.com/package/mailtea-mcp) tool catalog so an agent
 can reach **every** Mailtea capability — the same surface as the MCP server.
