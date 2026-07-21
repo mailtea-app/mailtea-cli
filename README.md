@@ -75,11 +75,20 @@ mailtea emails list [--status <s>] [--limit <n>] [--offset <n>] [--tag-name <n>]
 mailtea emails get|cancel <id>
 mailtea emails reschedule <id> --scheduled-at <iso>
 mailtea emails analytics [--from-date <iso>] [--to-date <iso>]
+mailtea posts create --publication-id <pub> --subject <s> (--html <h> | --template-id <id>) [--text <t>] [--from <a>] [--reply-to <a>] [--name <n>] [--kind newsletter|broadcast]
+mailtea posts list --publication-id <pub> [--limit <n>] [--offset <n>] [--status <s>] [--kind newsletter|broadcast]
+mailtea posts get|delete <post-id>
+mailtea posts update <post-id> [--subject <s>] [--html <h>] [--text <t>] [--from <a>] [--reply-to <a>] [--name <n>]
+mailtea posts send <post-id> [--scheduled-at <iso>]
 mailtea posts send-test <post-id> --to <addr> --from <addr> [--reply-to <addr>]
 
 mailtea contacts create|list|get|update|delete --publication-id <pub> ...
 mailtea segments create|list|get|update|delete --publication-id <pub> ...
 mailtea tags create|list|get|update|delete --publication-id <pub> ...
+mailtea senders create|list|get|update|delete --publication-id <pub> [--name <n>] [--email <a>] [--reply-to <a>] [--is-default]
+mailtea suppressions add|remove --email <a> [--email <a> ...] [--reason <r>]
+mailtea suppressions list [--reason <r>] [--q <search>] [--created-after <iso>] [--created-before <iso>] [--limit <n>] [--starting-after <c>]
+mailtea suppressions export
 mailtea domains create|list|get|verify|update|delete --publication-id <pub> ...
 mailtea domains tracking create|list|verify|delete --publication-id <pub> --domain-id <id> ...
 mailtea webhooks create|list|get|update|delete --publication-id <pub> [--event <e> ...]
