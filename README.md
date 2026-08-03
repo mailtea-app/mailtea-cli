@@ -38,7 +38,7 @@ API keys**, supplied any of three ways (in order):
 2. `MAILTEA_API_KEY` (or `MAILTEA_API_TOKEN`) environment variable
 3. `mailtea login --api-key mt_pat_xxx` (saved to `~/.mailtea/config.json`)
 
-Self-hosting or local dev? add `--base-url http://localhost:8787` (or
+Self-hosting or local dev? add `--base-url http://localhost:7787` (or
 `MAILTEA_API_BASE_URL`).
 
 ## Full capability bridge (every MCP tool)
