@@ -95,6 +95,11 @@ mailtea domains create|list|get|verify|update|delete --publication-id <pub> ...
 # domains update also takes --open-tracking / --click-tracking (true|false),
 #   --custom-return-path (a subdomain, or true for bounce.<domain>, or false),
 #   --tls and --tracking-subdomain.
+# domains update --clear-tracking-subdomain removes the tracking subdomain: the
+#   domain's links go back to being served from the Mailtea host. Links in mail
+#   already sent point at the old hostname and stop resolving. It is a flag
+#   rather than an empty --tracking-subdomain because an empty string is what an
+#   unset shell variable expands to; passing both flags is refused.
 # domains list also takes --region <code> and --status pending|verified.
 mailtea domains claim <name> --publication-id <pub> [--region <code>]
 mailtea domains claims get|verify|cancel <claim-id> --publication-id <pub>
