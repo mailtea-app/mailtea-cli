@@ -90,6 +90,14 @@ mailtea suppressions add|remove --email <a> [--email <a> ...] [--reason <r>]
 mailtea suppressions list [--reason <r>] [--q <search>] [--created-after <iso>] [--created-before <iso>] [--limit <n>] [--starting-after <c>]
 mailtea suppressions export
 mailtea domains create|list|get|verify|update|delete --publication-id <pub> ...
+# domains create also takes --region <code>, --tls opportunistic|enforced and
+#   --tracking-subdomain <label>. A domain's region is fixed at create.
+# domains update also takes --open-tracking / --click-tracking (true|false),
+#   --custom-return-path (a subdomain, or true for bounce.<domain>, or false),
+#   --tls and --tracking-subdomain.
+# domains list also takes --region <code> and --status pending|verified.
+mailtea domains claim <name> --publication-id <pub> [--region <code>]
+mailtea domains claims get|verify|cancel <claim-id> --publication-id <pub>
 mailtea domains tracking create|list|verify|delete --publication-id <pub> --domain-id <id> ...
 mailtea webhooks create|list|get|update|delete --publication-id <pub> [--event <e> ...]
 mailtea contact-properties create|list|update|delete ...        # team-scoped, no --publication-id
